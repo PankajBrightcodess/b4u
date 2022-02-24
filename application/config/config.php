@@ -30,7 +30,7 @@ date_default_timezone_set('Asia/Kolkata');
 // 	$config['base_url'] = "https://demo.softwarebss.com/b4u/";
 // }
 if(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='localhost'){
-	$config['base_url'] = "http://$_SERVER[HTTP_HOST]/b4u/";
+	$config['base_url'] = "http://localhost/b4u/";
 }
 else{
 	$config['base_url'] = "https://demo.softwarebss.com/b4u/";
