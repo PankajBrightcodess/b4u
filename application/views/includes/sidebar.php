@@ -1,10 +1,10 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar elevation-4 sidebar-no-expand <?php echo SIDEBAR_COLOR; ?>">
     <!-- Brand Logo -->
-    <a href="<?php echo base_url(); ?>" class="brand-link <?php echo BRAND_COLOR; ?>">
+    <!-- <a href="<?php echo base_url(); ?>" class="brand-link <?php echo BRAND_COLOR; ?>">
         <img src="<?php echo file_url("assets/images/icon.png"); ?>" alt="Foodoo Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light"><?php echo PROJECT_NAME; ?></span>
-    </a>
+    </a> -->
     
     <!-- Sidebar -->
     <div class="sidebar">
@@ -19,15 +19,15 @@
         </div>
         
         <!-- Sidebar Menu -->
-        <?php /*?><nav class="mt-2 hidden">
+        <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column nav-compact nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="<?php echo base_url(); ?>" class="nav-link <?php echo activate_menu('dashboard'); ?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
-                </li>
-                <li class="nav-item has-treeview <?php echo activate_dropdown('category'); ?>">
+                </li> -->
+                <!-- <li class="nav-item has-treeview <?php echo activate_dropdown('category'); ?>">
                     <a href="#" class="nav-link <?php echo activate_dropdown('category','a'); ?>">
                         <i class="nav-icon fas fa-list"></i>
                         <p>Category <i class="right fas fa-angle-left"></i></p>
@@ -40,13 +40,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
-            </ul>
-        </nav><?php */?>
-        <!-- /.sidebar-menu -->
-        <!-- Sidebar Menu -->
-         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column nav-compact nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">                
+                </li> -->
             <?php 
             if(!empty($sidebarmenu)){
                 foreach($sidebarmenu as $sidebarlist){
@@ -60,7 +54,7 @@
             </li>
             <?php }else{ $not = json_decode($sidebarlist['activate_not'],true);?>
             <li class="nav-item has-treeview <?php echo activate_dropdown($sidebarlist['activate_menu'],'li',$not); ?>">
-                <a class="nav-link <?php echo activate_dropdown($sidebarlist['activate_menu'],'a',$not); ?>" href="#" data-toggle="treeview">
+                <a class="nav-link <?php echo activate_menu($sidebarlist['activate_menu']) ?>" href="#" data-toggle="treeview">
                     <?php echo $sidebarlist['icon'];?>
                     <p><?php echo $sidebarlist['name'];?> <i class="right fas fa-angle-left"></i></p>
                 </a>
@@ -84,7 +78,7 @@
             }
             ?>
             </ul>
-        </nav> 
+        </nav>
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->

@@ -2,14 +2,14 @@
 
         <div class="login-box">
             <div class="login-logo">
-                <a href="<?php echo base_url(); ?>"><b><?php echo PROJECT_NAME; ?></b></a>
+                <a href="<?php echo base_url(); ?>"><b>Baazar For You</b></a>
             </div>
             <!-- /.login-logo -->
             <div class="card">
                 <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
                 
-                    <?php echo form_open('login/validateLogin'); ?>
+                    <?php echo form_open('admin/validateLogin'); ?>
                         <div class="input-group mb-3">
                             <input type="username" class="form-control" name="username" placeholder="Username">
                             <div class="input-group-append">

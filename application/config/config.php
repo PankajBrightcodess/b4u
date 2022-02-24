@@ -25,10 +25,11 @@ date_default_timezone_set('Asia/Kolkata');
 |
 */
 if(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='localhost'){
-	$config['base_url'] = "http://$_SERVER[HTTP_HOST]/templates/admin_template_b4";
-}
-else{
-	$config['base_url'] = "";
+	$config['base_url'] = "http://$_SERVER[HTTP_HOST]/b4u";
+}elseif(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='software.brightcodess.in'){
+	$config['base_url'] = "http://software.brightcodess.in/b4u/index.php";
+}else{
+	$config['base_url'] = "http://b4u.in/";
 }
 
 /*

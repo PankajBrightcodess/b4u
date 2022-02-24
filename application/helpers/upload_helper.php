@@ -25,30 +25,24 @@
 				$config['overwrite'] = TRUE;  
 			}
 			$CI->upload->initialize($config);
-			$return = array('status'=>false,'msg'=>'Image Not Uploaded !!');
+			$result='';
 			if(is_uploaded_file($_FILES[$name]['tmp_name'])){
 				if ( ! $CI->upload->do_upload($name)) {
 					/*$info=get_file_info($_FILES[$name]['tmp_name']);
 					print_r($_FILES);
 					print_r($info);
 					die;*/
-					$error = $CI->upload->display_errors(); 
+					echo $error = $CI->upload->display_errors(); 
 					$file=false;
-					////////////////////
-					$return['status'] = false;
-					$return['msg'] = $error;
 				}
 				else { 
 					$filedata = $CI->upload->data(); 
 					$file=$filedata['raw_name'].$filedata['file_ext'];
 					$src=$upload_path."$file";
 					$result=substr($src,1);
-					/////////////////////
-					$return['status'] = true;
-					$return['path'] = $result;
 				}
 			}
-			return $return;
+			return $result;
 		}  
 	}
 ?>

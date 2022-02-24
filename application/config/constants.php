@@ -86,31 +86,50 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 ///////////////////////////////////////////////
 $curyear = date('Y',strtotime(date('Y-m-d'))); 
-defined('PROJECT_NAME')        OR define('PROJECT_NAME','Admin Template'); 
+defined('PROJECT_NAME')        OR define('PROJECT_NAME','Admin Panel'); 
 defined('OUR_BRAND')       	   OR define('OUR_BRAND',"Brightcode Software Services Pvt Ltd.");
 defined('SESSION_YEAR')        OR define('SESSION_YEAR',"$curyear");
-defined('SITE_SALT')           OR define('SITE_SALT',"Admin Template");
-defined('TP')        		   OR define('TP',"tmp_"); // Table Prefix
+defined('SITE_SALT')           OR define('SITE_SALT',"Greendots");
+defined('TP')        		   OR define('TP',"gd_"); // Table Prefix
 defined('PRE')                 OR define('PRE',"<pre>");
-defined('NTYPE')                 OR define('NTYPE',"toastr"); //Notification Type
+defined('NTYPE')               OR define('NTYPE',"toastr"); //Notification Type
 //////////////////////////////////////////////
 /*--------------Template Colors-------------*/
 //////////////////////////////////////////////
-defined('ACCENT_COLOR')        OR define('ACCENT_COLOR',"accent-danger");
-defined('NAVBAR_COLOR')        OR define('NAVBAR_COLOR',"navbar-light navbar-warning");
-defined('BRAND_COLOR')         OR define('BRAND_COLOR',"navbar-light");
-defined('SIDEBAR_COLOR')       OR define('SIDEBAR_COLOR',"sidebar-dark-warning");
+defined('ACCENT_COLOR')        OR define('ACCENT_COLOR',"accent-primary");
+defined('NAVBAR_COLOR')        OR define('NAVBAR_COLOR',"navbar-light");
+defined('BRAND_COLOR')         OR define('BRAND_COLOR',"navbar-dark");
+defined('SIDEBAR_COLOR')       OR define('SIDEBAR_COLOR',"sidebar-dark-primary");
 //////////////////////////////////////////////
 
 if(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='localhost'){
+
 	defined('DB_HOST')		? null : define('DB_HOST','localhost');
 	defined('DB_USER')		? null : define('DB_USER', 'root');
 	defined('DB_PASSWORD')	? null : define('DB_PASSWORD','');
-	defined('DB_NAME')		? null : define('DB_NAME','db_admintemplate');
+	defined('DB_NAME')		? null : define('DB_NAME','db_b4u');
+
+}elseif(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='software.brightcodess.in'){
+
+	defined('DB_HOST')      ? null : define('DB_HOST', 'db5000686726.hosting-data.io');
+	defined('DB_USER')      ? null : define('DB_USER', 'dbu1033771');
+	defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'db_baazarforu@123#');
+	defined('DB_NAME')      ? null : define('DB_NAME', 'dbs634334');
+
 }
 else{
-	defined('DB_HOST')      ? null : define('DB_HOST', 'localhost');
-	defined('DB_USER')      ? null : define('DB_USER', 'root');
-	defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', '');
-	defined('DB_NAME')      ? null : define('DB_NAME', '');
+
+	defined('DB_HOST')      ? null : define('DB_HOST', 'db5000686726.hosting-data.io');
+	defined('DB_USER')      ? null : define('DB_USER', 'dbu1033771');
+	defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'db_baazarforu@123#');
+	defined('DB_NAME')      ? null : define('DB_NAME', 'dbs634334');
+	
 }
+
+///////////////////////////////////////////////
+/*--------------Key-------------*/
+///////////////////////////////////////////////
+defined('API_KEY')       OR define('API_KEY',"rzp_test_g8MGkJ8yKXQbzw");
+defined('API_SECRET')       OR define('API_SECRET',"TdY89OZdTLUe4qcC2p8i8wvO");
+#rzp_live_heeOhYGSHh4VzK
+#qMbq5oDwQIckB2LPeeYND1K3

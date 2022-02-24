@@ -33,15 +33,5 @@
         } 
         ?> 
     </tbody>
-    <tfoot class="hidden">
-        <tr>
-        	<?php
-            	if(!empty($columns)){
-					foreach($columns as $column){
-						echo "<th>$column[Field]</th>";
-					}
-				}
-			?>
-        </tr>
-    </tfoot>
+
 </table>

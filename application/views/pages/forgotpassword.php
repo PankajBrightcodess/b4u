@@ -7,7 +7,7 @@
                 <div class="card-body login-card-body">
                     <p class="login-box-msg">Enter Username to recover Password</p>
                     
-                    <?php echo form_open('login/validateuser'); ?>
+                    <?php echo form_open('admin/validateuser'); ?>
                         <div class="form-group has-feedback">
                             <input type="username" class="form-control" name="username" placeholder="Username" required>
                             <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -16,7 +16,7 @@
                             <?php if($this->session->flashdata("logerr")!==NULL){ echo $this->session->flashdata("logerr");} ?>
                         </div>
                         <div class="row">
-                            <div class="col-6"><a href="<?php echo base_url('login/'); ?>">Login</a></div>
+                            <div class="col-6"><a href="<?php echo base_url('adminpanel/'); ?>">Login</a></div>
                             <div class="col-6">
                                 <button type="submit" class="btn btn-primary btn-block btn-flat" name="forgotpassword">Forgot Password</button>
                             </div>
