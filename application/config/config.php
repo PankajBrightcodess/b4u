@@ -29,7 +29,7 @@ if(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='localhost'){
 }elseif(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='software.brightcodess.in'){
 	$config['base_url'] = "http://software.brightcodess.in/b4u/index.php";
 }else{
-	$config['base_url'] = "http://demo.softwarebss.com/b4u";
+	$config['base_url'] = "http://demo.softwarebss.com/b4u/";
 }
 
 /*
