@@ -110,11 +110,15 @@ if(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='localhost'){
 	defined('DB_NAME')		? null : define('DB_NAME','db_b4u');
 
 }else{
-
 	defined('DB_HOST')      ? null : define('DB_HOST', 'localhost');
-	defined('DB_USER')      ? null : define('DB_USER', 'softwarebss_bforu');
-	defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'Bforu@2022#');
-	defined('DB_NAME')      ? null : define('DB_NAME', 'softwarebss_bforu');
+	defined('DB_USER')      ? null : define('DB_USER', 'softwarebss_bazar4you');
+	defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'Bazar4you@123#');
+	defined('DB_NAME')      ? null : define('DB_NAME', 'softwarebss_bazar4you');
+
+	// defined('DB_HOST')      ? null : define('DB_HOST', 'localhost');
+	// defined('DB_USER')      ? null : define('DB_USER', 'softwarebss_bforu');
+	// defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'Bforu@2022#');
+	// defined('DB_NAME')      ? null : define('DB_NAME', 'softwarebss_bforu');
 	
 }
 	// elseif(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='software.brightcodess.in'){
