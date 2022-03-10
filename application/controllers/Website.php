@@ -8,6 +8,10 @@ class Website extends CI_Controller {
     }
 
     public function index(){
+      if (strpos(base_url(), 'https') !== false && isset($_SERVER['REQUEST_SCHEME']) && $_SERVER['REQUEST_SCHEME'] == 'http') {
+      $url = $_SERVER['REQUEST_SCHEME'] . 's://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+      redirect($url);
+    }
       $categorylist = $this->Master_model->getall_category_from_webdesign();     
       $cattree = array();
       if(!empty($categorylist)){
